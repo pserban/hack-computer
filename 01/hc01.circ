@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.7.2" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="NotGate"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="NotGate">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="NotGate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="130,61 130,80" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="130,60 160,70" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="131,80 160,71" stroke="#000000" stroke-width="2"/>
+      <ellipse cx="166" cy="70" fill="none" rx="5" ry="5" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="121,70 129,70" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="174,70 180,70" stroke="#000000" stroke-width="2"/>
+      <circ-anchor facing="east" height="6" width="6" x="117" y="67"/>
+      <circ-port height="10" pin="310,80" width="10" x="175" y="65"/>
+      <circ-port height="8" pin="80,80" width="8" x="116" y="66"/>
+    </appear>
+    <comp lib="0" loc="(310,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="nota"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(80,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="1" loc="(260,80)" name="NAND Gate"/>
+    <wire from="(150,100)" to="(200,100)"/>
+    <wire from="(150,60)" to="(150,80)"/>
+    <wire from="(150,60)" to="(200,60)"/>
+    <wire from="(150,80)" to="(150,100)"/>
+    <wire from="(260,80)" to="(310,80)"/>
+    <wire from="(80,80)" to="(150,80)"/>
+  </circuit>
+  <circuit name="AndGate">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="AndGate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <polyline fill="none" points="110,49 111,91" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="111,49 130,49" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="112,91 130,91" stroke="#000000" stroke-width="2"/>
+      <path d="M132,49 Q149,52 149,71" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M131,91 Q149,90 149,71" fill="none" stroke="#000000" stroke-width="2"/>
+      <circ-anchor facing="east" height="6" width="6" x="147" y="67"/>
+      <circ-port height="10" pin="350,100" width="10" x="145" y="65"/>
+      <circ-port height="8" pin="100,120" width="8" x="106" y="76"/>
+      <circ-port height="8" pin="100,80" width="8" x="106" y="56"/>
+    </appear>
+    <comp lib="0" loc="(100,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(100,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(350,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="aandb"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(250,100)" name="NAND Gate"/>
+    <comp loc="(270,100)" name="NotGate"/>
+    <wire from="(100,120)" to="(190,120)"/>
+    <wire from="(100,80)" to="(190,80)"/>
+    <wire from="(250,100)" to="(270,100)"/>
+    <wire from="(330,100)" to="(350,100)"/>
+  </circuit>
+  <circuit name="OrGate">
+    <a name="appearance" val="custom"/>
+    <a name="circuit" val="OrGate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <appear>
+      <path d="M100,41 Q110,59 100,81" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M100,41 Q128,44 139,60" fill="none" stroke="#000000" stroke-width="2"/>
+      <path d="M100,82 Q129,80 139,61" fill="none" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="102,50 104,50" stroke="#000000" stroke-width="2"/>
+      <polyline fill="none" points="102,70 104,70" stroke="#000000" stroke-width="2"/>
+      <circ-anchor facing="east" height="6" width="6" x="137" y="57"/>
+      <circ-port height="10" pin="380,120" width="10" x="135" y="55"/>
+      <circ-port height="8" pin="140,100" width="8" x="96" y="46"/>
+      <circ-port height="8" pin="140,140" width="8" x="96" y="66"/>
+    </appear>
+    <comp lib="0" loc="(140,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp lib="0" loc="(140,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(380,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="aorb"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(340,120)" name="NAND Gate"/>
+    <comp loc="(200,100)" name="NotGate"/>
+    <comp loc="(200,140)" name="NotGate"/>
+    <wire from="(140,100)" to="(200,100)"/>
+    <wire from="(140,140)" to="(200,140)"/>
+    <wire from="(260,100)" to="(280,100)"/>
+    <wire from="(260,140)" to="(280,140)"/>
+    <wire from="(340,120)" to="(380,120)"/>
+  </circuit>
+  <circuit name="XorGate">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="XorGate"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(440,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="axorb"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(90,220)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="b"/>
+    </comp>
+    <comp lib="0" loc="(90,80)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="a"/>
+    </comp>
+    <comp loc="(130,220)" name="NotGate"/>
+    <comp loc="(130,80)" name="NotGate"/>
+    <comp loc="(280,210)" name="AndGate"/>
+    <comp loc="(280,90)" name="AndGate"/>
+    <comp loc="(380,140)" name="OrGate"/>
+    <wire from="(120,120)" to="(220,120)"/>
+    <wire from="(120,160)" to="(120,220)"/>
+    <wire from="(120,160)" to="(200,160)"/>
+    <wire from="(120,220)" to="(130,220)"/>
+    <wire from="(120,80)" to="(120,120)"/>
+    <wire from="(120,80)" to="(130,80)"/>
+    <wire from="(190,220)" to="(240,220)"/>
+    <wire from="(190,80)" to="(240,80)"/>
+    <wire from="(200,100)" to="(200,160)"/>
+    <wire from="(200,100)" to="(240,100)"/>
+    <wire from="(220,120)" to="(220,200)"/>
+    <wire from="(220,200)" to="(240,200)"/>
+    <wire from="(280,210)" to="(300,210)"/>
+    <wire from="(280,90)" to="(300,90)"/>
+    <wire from="(300,130)" to="(340,130)"/>
+    <wire from="(300,150)" to="(300,210)"/>
+    <wire from="(300,150)" to="(340,150)"/>
+    <wire from="(300,90)" to="(300,130)"/>
+    <wire from="(380,140)" to="(440,140)"/>
+    <wire from="(90,220)" to="(120,220)"/>
+    <wire from="(90,80)" to="(120,80)"/>
+  </circuit>
+</project>
